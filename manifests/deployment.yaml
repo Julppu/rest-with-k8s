@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rest-basic
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rest-basic
+  template:
+    metadata:
+      labels:
+        app: rest-basic
+    spec:
+      containers:
+        - name: rest-server
+          image: julppu/rest-with-devops:1.02
