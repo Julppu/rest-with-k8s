@@ -7,7 +7,7 @@ import (
 )
 
 func homeHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Server operational!")
+	fmt.Fprintf(w, "Server operational: %s!", r.URL.Path[1:])
 }
 
 func main() {
