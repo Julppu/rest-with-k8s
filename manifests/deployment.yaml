@@ -1,12 +1,12 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: devops-with-k8s
+  name: rest-server
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: devops-with-k8s
+      app: rest-server
   template:
     metadata:
       labels:
